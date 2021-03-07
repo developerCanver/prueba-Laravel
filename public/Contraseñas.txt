@@ -1,0 +1,16 @@
+Credenciales para los usuarios
+
+//usuario administrador
+Email: admin@gmail.com
+contraseña: Admin2021
+
+//usuario piloto
+Email: canver@gmail.com
+contraseña: canver12345
+
+
+//usuario piloto
+Email: orlando@gmail.com
+contraseña: orlando12345
+
+//nota: cuando se registra un usuario esta validado para ser tipo de usuario Piloto
