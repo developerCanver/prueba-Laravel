@@ -13,5 +13,11 @@ class Modelos extends Model
     protected $fillable = [
         'name', 'mark_id'
     ];
+
+    public static function search($search){
+        return empty($search) ? static::query()
+        :static::where('models.id','like', '%'.$search.'%')
+        ->orwhere('models.name','like', '%'.$search.'%');
+    }
     
 }

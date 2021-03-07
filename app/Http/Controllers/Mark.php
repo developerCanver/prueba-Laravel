@@ -14,15 +14,15 @@ class Mark extends Controller
         $this->middleware('auth');
     }
     
-    public function index(){
+    public function index(Request $request){
 
         $id_admin= Auth::user()->rol_id;
         $id_user= Auth::user()->id;
  
         if ($id_admin==1) {
-             $consulta = DB::table('marks')->get();       
+             $consulta = Marks::search($request->query('search'))->get();       
         } else {
-             $consulta = DB::table('marks')
+             $consulta = Marks::search($request->query('search'))
              ->where('user_id','=',$id_user)->get();
         }
         

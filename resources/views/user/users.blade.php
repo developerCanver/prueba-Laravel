@@ -21,20 +21,20 @@
                         @csrf
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" class="form-control" value="Pepito">
+                            <input type="text" name="name" class="form-control"  placeholder="Ingresé nombre de usuario" autofocus>
                             @error('name') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email </label>
-                            <input type="email" class="form-control" name="email" value="Pepito@gmail.com">
+                            <input type="email" class="form-control" name="email" placeholder="Ejemplo@gmail.com">
                             @error('email') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
                         <div class="form-group row">
                             <label for="email">Contraseña </label>
                             <input id="password" type="password"
                                 class="form-control @error('password') is-invalid @enderror" name="password" required
-                                autocomplete="new-password" value="Pepito@gmail.com">
+                                autocomplete="new-password">
 
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                             <label for="email">Confirmar contraseña </label>
                             <input id="password-confirm" type="password" class="form-control"
                                 name="password_confirmation" required autocomplete="new-password"
-                                value="Pepito@gmail.com">
+                                >
                         </div>
                         <div class="modal-footer">
                             <button type="button" style="background: #ffffff;color:#1a2942;" class="btn btn-secondary"

@@ -14,13 +14,16 @@ class User extends Controller
     public function __construct()    {
         $this->middleware('auth');
     }
-    public function index(){
-
+    public $request='';
+    public function index(Request $request){
+        
        $id_admin= Auth::user()->rol_id;
        $id_user= Auth::user()->id;
+      
+      
 
        if ($id_admin==1) {
-            $consulta = DB::table('users')
+            $consulta = Users::search($request->query('search'))  
             ->where('rol_id','<>',$id_admin)->get();       
        } else {
             $consulta = DB::table('users')

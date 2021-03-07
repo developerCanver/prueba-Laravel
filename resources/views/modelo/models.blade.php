@@ -140,19 +140,6 @@
                                                     value="{{$consulta->nameMark}}">
                                                 
                                             </div>
-                                            {{-- <div class="form-group col-md-6">
-                                                <label for="recipient-name" class="col-form-label">Marca:</label>
-                    
-                                                <select class="select-css" name="mark_id">
-                                                    @foreach ($marcas as $marca)
-                                                    <option value="{{$marca->id}}">{{$marca->name}}
-                                                    </option>
-                    
-                                                    @endforeach
-                    
-                                                </select>
-                                            </div> --}}
-
                                             <div class="form-group">
                                                 <label for="name">Modelo</label>
                                                 <input type="text" name="name" class="form-control"
@@ -173,6 +160,7 @@
 
                     </tbody>
                 </table>
+               
                 @else
                 <br><br>
                 <div class="container m-5">
